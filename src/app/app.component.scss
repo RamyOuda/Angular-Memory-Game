@@ -1,0 +1,45 @@
+$route-text-color-inactive: #505050;
+$route-text-color-active: #252525;
+$navbar-color: #d4d4d4;
+$navitem-color-inactive: #c2c2c2;
+$navitem-color-active: #afafaf;
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+:host {
+  .navbar {
+    background-color: $navbar-color;
+    height: 50px;
+    font-size: 1.8rem;
+    padding-left: 20px;
+    @include flex;
+
+    .navgroup {
+      margin: 0;
+      @include flex;
+
+      .navitem {
+        list-style: none;
+        margin-right: 20px;
+        @include flex;
+
+        .route {
+          color: $route-text-color-inactive;
+          background-color: $navitem-color-inactive;
+          border-radius: 5px;
+          padding: 2px 8px;
+          text-decoration: none;
+          font-size: 1.4rem;
+        }
+
+        .route-active {
+          color: $route-text-color-active;
+          background-color: $navitem-color-active;
+        }
+      }
+    }
+  }
+}
