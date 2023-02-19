@@ -1,18 +1,29 @@
 :host {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+
+  .game-score {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+  }
 
   .game-board {
     display: flex;
     flex-wrap: wrap;
-    width: 1404px;
+  }
+
+  .game-score,
+  .game-board {
+    align-self: center;
+    max-width: 1404px;
   }
 }
 
 @media (max-width: 1404px) {
   :host {
     .game-board {
-      width: 940px;
+      max-width: 940px;
     }
   }
 }
@@ -20,7 +31,7 @@
 @media (max-width: 940px) {
   :host {
     .game-board {
-      width: 468px;
+      max-width: 468px;
     }
   }
 }
