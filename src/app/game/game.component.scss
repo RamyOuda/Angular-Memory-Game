@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  justify-content: center;
+
+  .game-board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1404px;
+  }
+}
+
+@media (max-width: 1404px) {
+  :host {
+    .game-board {
+      width: 940px;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  :host {
+    .game-board {
+      width: 468px;
+    }
+  }
+}
