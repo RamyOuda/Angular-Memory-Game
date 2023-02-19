@@ -1,5 +1,9 @@
 <div class="game-score">Score: {{ currentScore }}</div>
 
 <section #boardRef class="game-board">
-  <color-card *ngFor="let color of colors" (click)="updateScore()"></color-card>
+  <color-card
+    *ngFor="let color of colors; index as i"
+    [ngStyle]="{ 'background-color': colors[i] }"
+    (click)="updateScore()"
+  ></color-card>
 </section>
